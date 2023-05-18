@@ -1,0 +1,107 @@
+<app-menu></app-menu>
+
+
+  <div class="pcoded-content">
+      <!-- [ breadcrumb ] start -->
+      <div >
+          <div>
+             <div class="divlink_search">
+              <div class="link_">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="margin-top: 80px;">
+                  <li class="nav-item">
+                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" style="font-weight: bold;">Cas d'utilisation agriculture</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-weight: bold;">Cas d'utilisation de livraison</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="search-hero">
+                <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Recherche...">
+              </div>
+
+
+             </div>
+              <div class="tab-content" id="pills-tabContent">
+                  <div class="mt-5 tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                      <section class="wrapper">
+                          <div class="container-fostrap">
+                              <div class="content">
+                                  <div class="container">
+                                      <div class="row">
+                                        <div *ngFor="let robot of donR | filter:searchText | paginate: { itemsPerPage: tableSize,currentPage: page, totalItems:count}; let i = index" class="col-xs-12 col-lg-3">
+                                          <div class="card">
+                                              <a class="img-card" (click)="selectionEngin()">
+                                                  <img src="{{robot.img}}" />
+                                            </a>
+                                              <div class="card-content">
+                                                  <h4 class="card-title">
+                                                   <small class="etat-vert-rouge" style="position: absolute; top:5px;  right:2%; background:red; width:20px; height:8px; border-radius:2px"></small>
+                                                      <a href=""> {{robot.libele}}
+                                                    </a>
+                                                  </h4>
+                                                  <p class="">
+                                                    {{robot.type}}
+                                                  </p>
+                                              </div>
+
+                                          </div>
+                                      </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </section>
+                  </div>
+                  <div class="mt-5 tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <section class="wrapper">
+                          <div class="container-fostrap">
+                              <div>
+                              </div>
+                              <div class="content">
+                                <div class="container">
+                                  <div class="row">
+                                    <div *ngFor="let robot of donD | filter:searchText | paginate: { itemsPerPage: tableSize,currentPage: page, totalItems:count}; let i = index" class="col-xs-12 col-lg-3">
+                                      <div class="card">
+                                          <a class="img-card" (click)="selectionEngin()">
+                                              <img src="{{robot.img}}" />
+                                        </a>
+                                          <div class="card-content">
+                                              <h4 class="card-title">
+                                               <small class="etat-vert-rouge" style="position: absolute; top:5px;  right:2%; background:red; width:20px; height:8px; border-radius:2px"></small>
+                                                  <a href=""> {{robot.libele}}
+                                                </a>
+                                              </h4>
+                                              <p class="">
+                                                {{robot.type}}
+                                              </p>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                      </section>
+                  </div>
+              </div>
+          </div>
+
+
+
+      </div>
+  </div>
+
+<div class="mt-8 py-5 flex justify-center items-center pagination-button">
+ <div class="pagination">
+    <pagination-controls (pageChange)="onTableDataChange($event)" previousLabel="Précédent"
+    nextLabel="Suivant" class="custom-pagination">
+  </pagination-controls>
+ </div>
+</div>
+
+
+
+

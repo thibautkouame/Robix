@@ -1,0 +1,55 @@
+.nav{
+  height: 100%;
+}
+
+.navbar-content h6{
+
+}
+
+.pcoded-navbar{
+  background-color: #000000;
+  background: linear-gradient(rgba(0, 0, 0, 0.876), rgb(0, 0, 0));
+  height: 100%;
+  position: fixed;
+}
+
+.list_el{
+  margin-top: 45px;
+}
+
+h6{
+  padding-top: 500px;
+  color: white;
+  font-size: 17px;
+  margin-inline-start: 10px;
+  border-bottom: 1px solid white;
+  line-height: 30px;
+  width: 179px;
+}
+
+header, .m-header{
+  background-color: #080808;
+  height: 80px;
+  position: fixed;
+}
+
+.pcoded-navbar .rtr{
+  background-color: #ae703a;
+  width: 30%;
+  position: absolute;
+  bottom: 5%;
+  text-align: center;
+  color: white;
+
+}
+ul > li{
+  color: gray;
+}
+
+ul > li:hover{
+  border-bottom: 1px solid gray;
+  color:#ff7900;
+  width: 45px;
+}
+
+

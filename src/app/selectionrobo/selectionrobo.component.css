@@ -1,0 +1,40 @@
+.contenubody{
+  background-color: #ffffff;
+}
+
+
+.details{
+ background-color:#000000;
+ border-radius: 10px;
+ padding:10px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+h1{
+ font-size: 18px;
+ text-align: center;
+ margin-right:10px
+}
+
+h6{
+  font-size: 20px;
+  text-align: center;
+
+ }
+
+.lib_{
+ display: flex;
+ align-items: center;
+ }
+
+
+ .libe{
+  margin-top: 10px;
+}
+
+

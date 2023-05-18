@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/style.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/webui.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "14803822-264c-4506-b029-8bc5a929971c"
   }
 }
